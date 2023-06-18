@@ -1,0 +1,89 @@
+
+
+<html>
+<head>
+	<title>SignIn Page</title>
+	<style>
+		body {
+			background-color: #b3b0b0;
+		/*background-image: url(texture\ \(3\).png);*/
+			background-size: 65% 110%;
+			background-repeat: no-repeat;
+			background-position-x: 250px;
+			font-family: Arial, sans-serif;
+			
+		}
+		h1 {
+			color: #272424a9;
+			text-align: center;
+			margin-top: 10px;
+			font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+			font-size: 120px;
+			font-weight: 1000;
+		}
+		form {
+			background-color: #dfd7d7;
+			width: 500px;
+			margin: 0 auto;
+			padding:10px 20px;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px #BBBBBB;
+		}
+		label {
+			display: block;
+			margin-top: 20px;
+			color: #272626;
+		}
+		input[type="text"], input[type="password"],input[type="email"] {
+			width: 80%;
+			padding: 10px;
+			border: none;
+			border-radius: 5px;
+			background-color: #33343566;
+			box-shadow: 0px 0px 5px #7e7b7b;
+			margin-top: 5px;
+			margin-bottom: 20px;
+		}
+		input[type="submit"] {
+			background-color: #008CBA;
+			color: #FFFFFF;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		input[type="submit"]:hover {
+			background-color: #006F8F;
+		}
+     .for-logo{
+		margin-left: 0%;
+		height: 98px;
+		width:100px;
+		background-image: url(logo\,croped.png);
+		background-size: contain;
+	 }
+	</style>
+</head>
+<body>
+	<div class="for-logo"></div>
+	<h1>Sign up</h1>
+	<form onsubmit=" submitForm(event)">
+		<label for="username">Username:</label>
+		<input type="text" id="name" name="username">
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password">
+        <label for="email">email:</label>
+        <input type="email" id="email" name="email">
+		<input type="submit" value="Submit">
+       
+    
+	</form>
+	<script>
+		function submitForm(event) {
+			event.preventDefault(); // prevent the form from submitting normally
+			var name = document.getElementById("name").value;
+			alert("Thank you for signing up, " + name + "!");
+		}
+	</script>
+</body>
+</html>
